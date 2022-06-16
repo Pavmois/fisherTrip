@@ -148,7 +148,11 @@
     </div>
 
   </div>
-
+  <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+  <script>
+    // Sends event to client
+    vkBridge.send('VKWebAppInit');
+  </script>
   <script src="js/vue.js"></script>
   <script src="js/const.js"></script>
   <script src="js/main.js"></script>
