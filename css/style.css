@@ -114,7 +114,7 @@ i.fa {
 .app__card {
   background-color: rgba(0,0,0,0.5);
   padding: 20px 10px;
-  border: 5px solid rgba(1,88,154,0.5);
+  border: 5px solid rgba(185,156,156,0.8);
   text-align: center;
 }
 .app__card:nth-child(1) {
@@ -148,8 +148,8 @@ i.fa {
   justify-content: space-between;
   align-items: center;
   padding: 5px 10px;
-  border: 5px solid rgba(1,88,154,0.5);
-  background-color: rgba(25,121,211,0.8);
+  border: 5px solid rgba(185,156,156,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   margin-bottom: 7px;
 }
 .app_result:last-child {
