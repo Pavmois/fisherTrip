@@ -214,7 +214,7 @@ i.fa-star {
 }
 .results__text-box {
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 20px;
 }
 .results__text {
@@ -256,10 +256,10 @@ i.fa-star {
   background-position: 45% 0;
 }
 .btn__obl {
-  background-color: #762877;
+  background-color: #ce4302;;
 }
 .btn__ork {
-  background-color: #56a725;
+  background-color: #d09d42;
 }
 .btn__witcher {
   background-color: #fce356;
@@ -269,7 +269,7 @@ i.fa-star {
   background-color: #9d0101;
 }
 .btn__got {
-  background-color: #da8618;
+  background-color: #7ea054;;
 }
 .btn__secret {
   background-color: #f5b673;
