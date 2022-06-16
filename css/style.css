@@ -175,8 +175,7 @@ i.fa-star {
   border-radius: 50%;
 }
 .btn_achivment {
-  background-color: rgba(0,0,0,0.5);
-  border: 5px solid rgba(1,88,154,0.5);
+  background-color: rgba(0,0,0);
 }
 .app__header-inner {
   color: #fff;
@@ -272,9 +271,8 @@ i.fa-star {
   background-color: #7ea054;;
 }
 .btn__secret {
-  background-color: #f5b673;
-  color: #000;
+  background-color: #74bd3a;
 }
 .btn__simple {
-  background-color: #fc7654;
+  background-color: #b6d9cc;
 }
