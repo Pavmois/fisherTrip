@@ -209,6 +209,8 @@ i.fa-star {
 }
 .results__img img {
   width: 250px;
+  border-radius: 50%;
+  border: 1px solid white;
 }
 .results__text-box {
   margin-bottom: 20px;
@@ -223,56 +225,56 @@ i.fa-star {
   background-size: cover;
   background-position: center center;
 }
-.app.results[data-race="zerg"] {
-  background-image: url(../img/zerg_bg.jpg);
+.app.results[data-race="obl"] {
+  background-image: url(../img/obl_bg.jpg);
   background-size: cover;
 }
-.app.results[data-race="primal"] {
-  background-image: url(../img/primal_bg.jpg);
+.app.results[data-race="ork"] {
+  background-image: url(../img/ork_bg.jpg);
   background-size: cover;
 }
-.app.results[data-race="terran"] {
-  background-image: url(../img/terran_bg.jpg);
+.app.results[data-race="got"] {
+  background-image: url(../img/got_bg.jpg);
   background-size: cover;
 }
-.app.results[data-race="infested"] {
-  background-image: url(../img/infested_bg.jpg);
+.app.results[data-race="secret"] {
+  background-image: url(../img/secret_bg.jpg);
   background-size: cover;
 }
-.app.results[data-race="protoss"] {
-  background-image: url(../img/protoss_bg.jpg);
+.app.results[data-race="witcher"] {
+  background-image: url(../img/witcher_bg.jpg);
   background-size: cover;
 }
-.app.results[data-race="taldarim"] {
-  background-image: url(../img/taldarim_bg.jpg);
+.app.results[data-race="gow"] {
+  background-image: url(../img/gow_bg.jpg);
   background-size: cover;
   background-position: 40% 0;
 }
-.app.results[data-race="hybrid"] {
-  background-image: url(../img/hybrid_bg.jpg);
+.app.results[data-race="simple"] {
+  background-image: url(../img/simple_bg.jpg);
   background-size: cover;
   background-position: 45% 0;
 }
-.btn__zerg {
+.btn__obl {
   background-color: #762877;
 }
-.btn__primal {
+.btn__ork {
   background-color: #56a725;
 }
-.btn__protoss {
+.btn__witcher {
   background-color: #fce356;
   color: #000;
 }
-.btn__taldarim {
+.btn__gow {
   background-color: #9d0101;
 }
-.btn__terran {
+.btn__got {
   background-color: #da8618;
 }
-.btn__infested {
+.btn__secret {
   background-color: #f5b673;
   color: #000;
 }
-.btn__hybrid {
+.btn__simple {
   background-color: #fc7654;
 }

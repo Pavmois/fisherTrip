@@ -4,29 +4,29 @@ const questions = [
         "Неожиданно, Вы приходите в себя. Где бы Вы предпочли, чтобы это случилось?",
         ["Избушка в лесу", "В борделе", "У городских ворот", "В деревне посреди битвы", "В столице вашей фракции"],
         [
-            "this.score.taldarim++",
-            "this.score.protoss++",
-            "this.score.zerg++",
-            "this.score.terran++",
-            "this.score.primal++"
+            "this.score.gow++",
+            "this.score.witcher++",
+            "this.score.obl++",
+            "this.score.got++",
+            "this.score.ork++"
         ]
     ],
     [
         "Какая одежда на вас?",
         ["Полный сет доспехов", "Сапоги и набедренная повязка", "Какие-то обноски"],
         [
-            "this.score.protoss++; this.score.terran--",
-            "this.score.primal++; this.score.protoss--; this.score.terran--",
-            "this.score.terran++; this.score.protoss--"
+            "this.score.witcher++; this.score.got--",
+            "this.score.ork++; this.score.witcher--; this.score.got--",
+            "this.score.got++; this.score.witcher--"
         ]
     ],
     [
         "Какой при вас оружие?",
         ["Огромный топор", "Обычная палка", "Два меча"],
         [
-            "this.score.protoss--",
-            "this.score.protoss--",
-            "this.score.protoss++"
+            "this.score.witcher--",
+            "this.score.witcher--",
+            "this.score.witcher++"
         ]
     ],
 
@@ -34,254 +34,254 @@ const questions = [
         "Вы обнаружили непонятное существо, ваши действия?",
         ["Не раздумывая атакую", "Сначала понаблюдаю, буду держаться аккуратно", "Постараюсь сбежать"],
         [
-            "this.score.primal++; this.score.protoss--; this.score.terran--", 
-            "this.score.protoss++; this.score.terran--", 
-            "this.score.terran++; this.score.protoss--"
+            "this.score.ork++; this.score.witcher--; this.score.got--", 
+            "this.score.witcher++; this.score.got--", 
+            "this.score.got++; this.score.witcher--"
         ]
     ],
     [
         "Вы любите выпить?",
         ["Да"],
         [
-            "this.score.terran++"
+            "this.score.got++"
         ]
     ],
     [
         "Вы увидели бегущего человека, Ваши действия?",
         ["Это слишком подозрительно, догоню и попрошу предьявить бумаги!", "Двинусь навстречу, необходимо узнать от чего он бежит.", "Постараюсь бежать быстрее него и желательно дальше"],
         [
-            "this.score.zerg+=2; this.score.protoss--; this.score.terran--", 
-            "this.score.protoss++; this.score.terran--; this.score.zerg-=2", 
-            "this.score.terran++; this.score.protoss--; this.score.zerg-=2"
+            "this.score.obl+=2; this.score.witcher--; this.score.got--", 
+            "this.score.witcher++; this.score.got--; this.score.obl-=2", 
+            "this.score.got++; this.score.witcher--; this.score.obl-=2"
         ]
     ],
     [
         "Недалеко от города открылся странный портал. Вас спрашивают, знаете ли вы что-нибудь об этом?",
         ["Нет, но я уже собираю бригау товарищей для оцепления опасного места", "Только то, что я из него и пришёл!", "Ненавижу, бля*ь, порталы!"],
         [
-            "this.score.zerg++; this.score.protoss--", 
-            "this.score.primal++; this.score.protoss--", 
-            "this.score.protoss++; this.score.zerg--"
+            "this.score.obl++; this.score.witcher--", 
+            "this.score.ork++; this.score.witcher--", 
+            "this.score.witcher++; this.score.obl--"
         ]
     ],
     [
         "Вы поймали за руку воришку, что пытался стащить пару жалких монет из вашего кармана.",
         ["Зарубить его топором!", "Проверить документы и отправить в тюрьму!", "Напугать и заставить вернить всё с процентами", "Сочуственно пожать эту руку, ведь Ваши карманы и так пусты.."],
         [
-            "this.score.primal++; this.score.protoss--; this.score.terran--", 
-            "this.score.zerg++; this.score.protoss--; this.score.terran--", 
-            "this.score.protoss++; this.score.terran--; this.score.zerg--", 
-            "this.score.terran++; this.score.protoss--; this.score.zerg--"
+            "this.score.ork++; this.score.witcher--; this.score.got--", 
+            "this.score.obl++; this.score.witcher--; this.score.got--", 
+            "this.score.witcher++; this.score.got--; this.score.obl--", 
+            "this.score.got++; this.score.witcher--; this.score.obl--"
         ]
     ],
     [
         "У вас есть имя?",
         ["Конечно, просто я не помню", "Нет, у меня слишком ленивые родители"],
         [
-            "this.score.terran++", 
-            "this.score.terran--"
+            "this.score.got++", 
+            "this.score.got--"
         ]
     ],
     [
         "У вас есть известное прозвище?",
         ["Нет", "Есть только звание", "Да, более того, каждая раса зовёт меня по своему"],
         [
-            "this.score.primal++; this.score.protoss--", 
-            "this.score.zerg++; this.score.protoss--", 
-            "this.score.protoss++; this.score.zerg--"
+            "this.score.ork++; this.score.witcher--", 
+            "this.score.obl++; this.score.witcher--", 
+            "this.score.witcher++; this.score.obl--"
         ]
     ],
     [
         "Вы дружны со всеми расами Вашего мира?",
         ["Да, особенно после того как мы пришли в их мир через портал", "Только если у них есть документы", "Я-то да, а вот они со мной не очень.."],
         [
-            "this.score.primal++; this.score.protoss--", 
-            "this.score.zerg++; this.score.protoss--", 
-            "this.score.protoss++; this.score.zerg--"
+            "this.score.ork++; this.score.witcher--", 
+            "this.score.obl++; this.score.witcher--", 
+            "this.score.witcher++; this.score.obl--"
         ]
     ],
     [
         "Вы сильно устали сегодня",
         ["Постараюсь найти не чужую постель и поспать", "Пойду в таверну, глотну пива", "Я вам не мальчик. Мужчины не устают."],
         [
-            "this.score.terran++; this.score.zerg--", 
-            "this.score.zerg++; this.score.terran--", 
-            "this.score.taldarim++; this.score.terran--; this.score.zerg--"
+            "this.score.got++; this.score.obl--", 
+            "this.score.obl++; this.score.got--", 
+            "this.score.gow++; this.score.got--; this.score.obl--"
         ]
     ],
     [
         "Если вы бросите топор, он вернётся к вам в руку?",
         ["Да, вместе с парой черепов моих врагов", "Ко мне возвращаются только брошенные магички", "Только если подброшу его над собой"],
         [
-            "this.score.taldarim++; this.score.zerg--", 
-            "this.score.protoss++; this.score.zerg--", 
-            "this.score.zerg++; this.score.protoss--"
+            "this.score.gow++; this.score.obl--", 
+            "this.score.witcher++; this.score.obl--", 
+            "this.score.obl++; this.score.witcher--"
         ]
     ],
     [
         "Какой цвет волос вам ближе?",
         ["Белый", "Каштановый", "Рыжий", "Чёрный"],
         [
-            "this.score.protoss--", 
-            "this.score.protoss-=2", 
-            "this.score.protoss++", 
-            "this.score.protoss-=3"
+            "this.score.witcher--", 
+            "this.score.witcher-=2", 
+            "this.score.witcher++", 
+            "this.score.witcher-=3"
         ]
     ],
     [
         "Вы поклонялись богам?",
         ["Я бил им морду.", "Да, у нас в каждом городе и около были святилища"],
         [
-            "this.score.taldarim++; this.score.terran--", 
-            "this.score.terran++"
+            "this.score.gow++; this.score.got--", 
+            "this.score.got++"
         ]
     ],
     [
         "Вам доводилось устраивать восстания в городах?",
         ["Нет, я их обычно подавляю", "Да, это моё хобби", "Последнее восстание что я видел оставило след на моей спине"],
         [
-            "this.score.zerg++; this.score.protoss--; this.score.terran--", 
-            "this.score.terran++; this.score.protoss--; this.score.zerg--", 
-            "this.score.protoss++; this.score.terran--; this.score.zerg--"
+            "this.score.obl++; this.score.witcher--; this.score.got--", 
+            "this.score.got++; this.score.witcher--; this.score.obl--", 
+            "this.score.witcher++; this.score.got--; this.score.obl--"
         ]
     ],
     [
         "Если враг вам не по силам, как его победить?",
-        ["Победа или смерть!", "4 часа кататься вокруг него, вдруг повезёт", "Забрать но возвышение и достать лук\арбалет"],
+        ["Победа или смерть!", "4 часа кататься вокруг него, вдруг повезёт", "Забраться на возвышение и достать лук\арбалет"],
         [
-            "this.score.terran--", 
-            "this.score.terran--", 
-            "this.score.terran++"
+            "this.score.got--", 
+            "this.score.got--", 
+            "this.score.got++"
         ]
     ],
     [
         "Арбалеты какого размера Вы предпочитаете? ",
         ["Я предпочитаю топоры", "Те, что могу натянуть", "Карманные, чтобы носить на поясе", "Чем больше, тем лучше"],
         [
-            "this.score.protoss--", 
-            "this.score.protoss--", 
-            "this.score.protoss++", 
-            "this.score.protoss--"
+            "this.score.witcher--", 
+            "this.score.witcher--", 
+            "this.score.witcher++", 
+            "this.score.witcher--"
         ]
     ],
     [
         "Вы обнаружили огромный, каменный женров на улице",
         ["Попытаюсь поднять его", "Распоряжусь убрать препяствтие с улицы", "Буду готовиться к встрече с троллем, что обранил своё кольцо"],
         [
-            "this.score.terran++; this.score.zerg--; this.score.protoss--", 
-            "this.score.zerg++; this.score.protoss--; this.score.terran--", 
-            "this.score.protoss++; this.score.terran--; this.score.zerg--"
+            "this.score.got++; this.score.obl--; this.score.witcher--", 
+            "this.score.obl++; this.score.witcher--; this.score.got--", 
+            "this.score.witcher++; this.score.got--; this.score.obl--"
         ]
     ],
     [
         "Две могущественные фракции вступили в войну. Вы примете участие?",
         ["Нет, до последнего буду держать нейтралитет", "С первым секунд выберу сторону и буду освобождать от врага города и форпосты"],
         [
-            "this.score.protoss++; this.score.terran--", 
-            "this.score.terran++; this.score.protoss--"
+            "this.score.witcher++; this.score.got--", 
+            "this.score.got++; this.score.witcher--"
         ]
     ],
     [
         "Между большим злом и маленьким...",
         ["Должно быть среднее", "Я предпочитаю выбирать никакое"],
         [
-            "this.score.protoss--", 
-            "this.score.protoss++"
+            "this.score.witcher--", 
+            "this.score.witcher++"
         ]
     ],
     [
         "В таверне Вы видите массовую драку",
         ["Не буду вмешиваться, пока меня не трогают", "Подожду, когда кто-нибудь упадёт, в надежде обчистить карманы", "Влечу с вертушки в толпу"],
         [
-            "this.score.protoss++; this.score.terran--", 
-            "this.score.terran++; this.score.protoss--", 
-            "this.score.primal++; this.score.protoss--; this.score.terran--"
+            "this.score.witcher++; this.score.got--", 
+            "this.score.got++; this.score.witcher--", 
+            "this.score.ork++; this.score.witcher--; this.score.got--"
         ]
     ],
     [
         "У вас скопилось немного деньжат",
         ["Потрачу на обучение у тренера", "Пополню все свои запасы", "Спущу на карты и шлюх"],
         [
-            "this.score.terran++", 
-            "this.score.terran+=2", 
-            "this.score.terran--"
+            "this.score.got++", 
+            "this.score.got+=2", 
+            "this.score.got--"
         ]
     ],
     [
         "Какую причёску вы предпочитаете?",
         ["Обычная, короткая стрижка", "Как придётся, но обычно длинные волосы", "Неважно какую предпочитаю я. Важно какую предпочитает моя лысина.."],
         [
-            "this.score.terran++; this.score.protoss--", 
-            "this.score.protoss++; this.score.zerg--", 
-            "this.score.taldarim++; this.score.zerg--"
+            "this.score.got++; this.score.witcher--", 
+            "this.score.witcher++; this.score.obl--", 
+            "this.score.gow++; this.score.obl--"
         ]
     ],
     [
         "Последний вопрос. Как вы относитесь к магии?",
         ["Как к курению. Крайне негативно, но иногда балуюсь сам", "Отлично, главное чтобы свитков хватало", "Если есть документы и лицензия - то хорошо"],
         [
-            "this.score.protoss++; this.score.terran--; this.score.zerg-=2", 
-            "this.score.terran++; this.score.protoss--; this.score.zerg-=2", 
-            "this.score.zerg+=2; this.score.protoss--; this.score.terran--"
+            "this.score.witcher++; this.score.got--; this.score.obl-=2", 
+            "this.score.got++; this.score.witcher--; this.score.obl-=2", 
+            "this.score.obl+=2; this.score.witcher--; this.score.got--"
         ]
     ]
 ];
 /* Данные для экранов резултата для каждой расы */
 const results = {
-    'zerg': {
-        name: "Зерг",
-        description: "Вы истинный зерг, чистота эссенции и служение во славу роя это ваше предназначение. Ваша стая захватила множество миров и теперь рой стал ещё сильней. Королева Клинков довольна вами, продолжайте и дальше служить ей. Вы уважаете протоссов, но не считаете что у них есть шанс сохраниться как вид. Ведь они не могут эволюционировать и в масштабах вселенной их раса обречена на вымирание. Тераны это биомасса, их эссенция может быть ассимилирована и использована во благо роя.",
-        quote1: "-Понятие совершенства растяжимо. Можно стремиться, невозможно достичь. Совершенство, как цель, лишено смысла.",
-        quote2: "-Смерть не имеет значения, важна только эссенция.",
-        author: "(Абатур)",
+    'obl': {
+        name: "Стражник Фишер",
+        description: "Вы - истинный страж правопорядка. Всё должно быть чётко, по уставу, соглаосвано и оформленно. Вы не боитесь ничего в этом мире, кроме как отсуствия печати на грамоте и подписи на пропуске. Всякие проходимцы не раз переходили Вам дорогу, но путь их был всегда одинаков - либо в тюрьму, либо на кладбище. Некоторые, правда, ещё загадочно растворялись в воздухе и появляись снова в том же месте, но это можно списать на не свежее пиво.",
+        quote1: "- Стап райт вейр, ю криминал скам!",
+        quote2: "",
+        author: "(Неизвестный стражник)",
         points: "100"
     },
-    'primal': {
-        name: "Изначальный зерг",
-        description: "Всё что вас интересует – это Эссенция, чем её больше тем лучше для вас. Вы эволюционируете, адаптируетесь и подстраиваетесь под окружающую среду. Нет таких проблем, которые вы не решите. Благодаря постоянному сбору эссенции вы можете в любой момент измениться. Эссенция это ваш образ жизни. Так много видов эссенции. Сотни видов. И с каждым годом всё больше. Нужно её всю собрать.",
-        quote1: "-Мне нужна эссенция. Эссенция это жизнь. Я жить без неё не могу.",
+    'ork': {
+        name: "Орк Фишер",
+        description: "Огромный, злой и что самое главное не тупой! По крайней мере не знает об этом, ведь окружающие боятся сообщать такие новости. Ваш девиз по жизни - Вижу цель, не вижу препятствий! Это несомненный плюс. Минус заключается в том, что когда вы не видите препятствий, вы бьётесь об них головой.",
+        quote1: "- Моя бить топор твоя! Моя не погибать, моя.. аййй! ",
         quote2: "",
-        author: "(Дехака)",
+        author: "(Дурофиш)",
         points: "120"
     },
-    'terran': {
-        name: "Терран",
-        description: "Вас не интересуют проблемы протоссов и зергов, вечная вражда и опустошение миров. Кровавый след, который тянется с незапамятных времён за этими враждующими расами затрагивает и терранов, как бы сильно вы не старались не вмешиваться. Избежать контакта с протоссами не получилось, но с ними можно договориться в отличии от зергов. Простые человеческие радости украшают вашу жизнь. Общение с друзьями, поход в бар с хорошей музыкой, отдых на природе. Что еще нужно человеку.",
-        quote1: "-Не связывайтесь с ребятами с Мар-Сары.",
+    'got': {
+        name: "Безымянный Фишер",
+        description: "Вы пришли из ниоткуда и уйдете вникуда. Никто этого не заметит, в этом мире Вы - пустое место. Однако есть призрачный шанс заявить о себе, возможно даже стать Гражданином! Но для этого сначала нужно выжить. И вот с этим пунктом постоянные проблемы!",
+        quote1: "- Но как! Но как! Я не могу сделать это. Но как!",
         quote2: "",
-        author: "(Рейнор)",
+        author: "(Безымянный)",
         points: "90"
     },
-    'infested': {
-        name: "Заражённый терран",
-        description: "Судя по всему вас заразили зерги, теперь вы служите рою. Но это не мешает вам мечтать о мести зергам.",
-        quote1: "-Зараженные всегда поднимаются вновь.",
-        quote2: "-Когда ОЗД вернется в сектор, от вас ничего не останется.",
-        author: "(Стуков)",
+    'secret': {
+        name: "Секретный Фишер",
+        description: "Легендарное достижение! Открыт секретный Фишер - стример Фортнайта. Как так вышло? Никто не знает, чистая случайность! Гордитесь своей уникальностью, таких как вы также мало, как онлайна на стриме Фортнайта. Каппа Каппа Каппа",
+        quote1: "Чтобы я ещё раз стримил Фортнайт...",
+        quote2: "",
+        author: "(Стример Давид)",
         points: "160"
     },
-    'protoss': {
-        name: "Протосс",
-        description: "Вы горды и безупречны. Честь ведёт вас сквозь пучину неприятностей, которые подстерегают ваш народ со времён войны со Сверхразумом. За Айур вы готовы сражаться до смерти. Все протоссы стремятся быть похожими на вас. У вашего народа вечная вражда с зергами, очищать миры от их скверны и уничтожать улей за ульем вот что является вашей первостепенной целью. Пока зерги не будут уничтожены, протоссы не смогут спать спокойно.",
-        quote1: "-Сила в единстве.",
-        quote2: "",
-        author: "(Артанис)",
+    'witcher': {
+        name: "Ведьмак Фишер",
+        description: "Геральт из Ривии, он же Гвинблейд, он же Белый волк, он же Равикс из Черторога, он же	Мясник из Блавикена. У вас есть свой Путь и вы ему следуете. Жизнь полна испытаний и сложностей, но вам их всегда мало, поэтому вы крутите романы сразу с несколькими чародейками. Изящный способ самоубийства, что тут сказать.",
+        quote1: "- Ненавижу порталы.",
+        quote2: "- Никак вы, блять, не научитесь!",
+        author: "(Белый Волк)",
         points: "80"
     },
-    'taldarim': {
-        name: "Талдарим",
-        description: "В былые времена вы служили Амуну, падшему Зел-Нага, сейчас же ваш народ обрёл свободу. После того как Аларак стал владыкой талдаримов победив Малаша в поединке Рак-Шир, он не просто изменил свой статус в цепи вознесения, но и привел талдаримов к мирному сосуществованию с другими народами протоссов. Теперь можно восстанавливать свои миры как один единый сильный народ. И ваши навыки будут очень полезны в этой непростой задаче.",
-        quote1: "-Ты разговариваешь с владыкой.",
-        quote2: "-Как ты можешь мне послужить?",
-        author: "(Аларак)",
+    'gow': {
+        name: "Кратос Фишер",
+        description: "Вы лысый и злой убийца богов. К тому же с надоедливым и непослушным пацаном на шее. Но вами движут благородные помыслы, так что вы молчаливо следуете своей цели, ибо не привыкли проигрывать или отступать.",
+        quote1: "*молчит*",
+        quote2: "- Боойййй",
+        author: "(Кратос)",
         points: "140"
     },
-    'hybrid': {
-        name: "Гибрид",
-        description: "Чистота формы и чистота эссенции присутствует в вашем организме. Вы одно из немногих существ, которых стремились создать Зел-Нага. Доктор Наруд сумел воплотить все планы Зел-Нага в жизнь и теперь вы идеальное орудие. Не смотря на то что вы гибрид зерга и протосса вы не чувствуете симпатии к этим расам, а считаете высшей расой Гибридов.",
-        quote1: "-Всё только начинается. Амун шептал об этом с далёких звёзд.",
+    'simple': {
+        name: "Работяга Давид",
+        description: "Вы очнулись и оказалось, что всё было лишь сном, ведь вы обычный работяга, что бахнул пивка после работы и отрубился за компом, за просмотром любимого стримера. Сейчас закинете ему пару донатов, попрощаетесь с чатом и пойдете отсыпаться.",
+        quote1: "- Да тут неглубоко, смотрие чё могу!",
         quote2: "",
-        author: "(Наруд)",
+        author: "(Пьяненький Давид)",
         points: "200"
     }
 }

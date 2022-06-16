@@ -8,25 +8,25 @@ let app = new Vue({
     showResult: false,
     number: 0,
     score: {
-      'zerg': 0,
-      'primal': 0,
-      'protoss': 0,
-      'taldarim': 0,
-      'terran': 0,
+      'obl': 0,
+      'ork': 0,
+      'witcher': 0,
+      'gow': 0,
+      'got': 0,
     },
     totalGame: localStorage.getItem('sc2TotalGame') ? JSON.parse(localStorage.getItem('sc2TotalGame')) : {
-      'zerg': 0,
-      'primal': 0,
-      'protoss': 0,
-      'taldarim': 0,
-      'terran': 0,
-      'infested': 0,
-      'hybrid': 0,
+      'obl': 0,
+      'ork': 0,
+      'witcher': 0,
+      'gow': 0,
+      'got': 0,
+      'secret': 0,
+      'simple': 0,
     },
     totalGames: localStorage.getItem('sc2TotalGames') ? localStorage.getItem('sc2TotalGames') : 0,
     questions: questions,
     results: results,
-    resultRace: 'infested',
+    resultRace: 'secret',
   },
   methods: {
     goToMain() {
@@ -56,11 +56,11 @@ let app = new Vue({
     },
     goToQuestions() {
       this.score = {
-        'zerg': 0,
-        'primal': 0,
-        'protoss': 0,
-        'taldarim': 0,
-        'terran': 0,
+        'obl': 0,
+        'ork': 0,
+        'witcher': 0,
+        'gow': 0,
+        'got': 0,
       }
       this.showMain = false
       this.showSocial = false
@@ -89,47 +89,47 @@ let app = new Vue({
       this.totalGames++;
       localStorage.setItem('sc2TotalGames', this.totalGames)
       // Зерг
-      if(this.score.zerg > this.score.protoss && this.score.zerg > this.score.terran && this.score.primal < 8 && Math.abs(this.score.protoss - this.score.zerg) > 3) {
-        this.goToResult('zerg')
-        this.totalGame.zerg++
+      if(this.score.obl > this.score.witcher && this.score.obl > this.score.got && this.score.ork < 8 && Math.abs(this.score.witcher - this.score.obl) > 3) {
+        this.goToResult('obl')
+        this.totalGame.obl++
       }
       //Изначальный
-      else if (this.score.primal > this.score.protoss && 
-      this.score.primal > this.score.terran && 
-      this.score.primal == 8) { 
-        this.goToResult('primal')
-        this.totalGame.primal++
+      else if (this.score.ork > this.score.witcher && 
+      this.score.ork > this.score.got && 
+      this.score.ork == 8) { 
+        this.goToResult('ork')
+        this.totalGame.ork++
       }
       //Протосс
-      else if (this.score.protoss > this.score.zerg && 
-      this.score.protoss > this.score.terran && 
-      this.score.taldarim < 5 && 
-      Math.abs(this.score.protoss - this.score.zerg) > 3) { 
-        this.goToResult('protoss')
-        this.totalGame.protoss++
+      else if (this.score.witcher > this.score.obl && 
+      this.score.witcher > this.score.got && 
+      this.score.gow < 5 && 
+      Math.abs(this.score.witcher - this.score.obl) > 3) { 
+        this.goToResult('witcher')
+        this.totalGame.witcher++
       } 
       //Талдарим
-      else if (this.score.protoss > this.score.zerg && 
-      this.score.protoss > this.score.terran && 
-      this.score.taldarim == 5) { 
-        this.goToResult('taldarim')
-        this.totalGame.taldarim++
+      else if (this.score.witcher > this.score.obl && 
+      this.score.witcher > this.score.got && 
+      this.score.gow == 5) { 
+        this.goToResult('gow')
+        this.totalGame.gow++
       }
       //Терран
-      else if (this.score.terran > this.score.zerg && 
-      this.score.terran > this.score.protoss) { 
-        this.goToResult('terran')
-        this.totalGame.terran++
+      else if (this.score.got > this.score.obl && 
+      this.score.got > this.score.witcher) { 
+        this.goToResult('got')
+        this.totalGame.got++
       }
       //Гибрид
-      else if (Math.abs(this.score.protoss - this.score.zerg) <= 3) { 
-        this.goToResult('hybrid')
-        this.totalGame.hybrid++
+      else if (Math.abs(this.score.witcher - this.score.obl) <= 3) { 
+        this.goToResult('simple')
+        this.totalGame.simple++
       } 
       //Заражённый терран
       else { 
-        this.goToResult('infested')
-        this.totalGame.infested++
+        this.goToResult('secret')
+        this.totalGame.secret++
       }
       localStorage.setItem('sc2TotalGame', JSON.stringify(this.totalGame))
     }
@@ -150,7 +150,7 @@ let app = new Vue({
       return count
     },
     favoriteRace() {
-      let max='zerg'
+      let max='obl'
       for(let i in this.totalGame) {
         if(this.totalGame[i]>this.totalGame[max]) {
           max=i
@@ -160,13 +160,13 @@ let app = new Vue({
     },
     showResultRace() {
       return {
-        'zerg': this.totalGame.zerg > 0 ? true : false,
-        'primal': this.totalGame.primal > 0 ? true : false,
-        'protoss': this.totalGame.protoss > 0 ? true : false,
-        'taldarim': this.totalGame.taldarim > 0 ? true : false,
-        'terran': this.totalGame.terran > 0 ? true : false,
-        'infested': this.totalGame.infested > 0 ? true : false,
-        'hybrid': this.totalGame.hybrid > 0 ? true : false,
+        'obl': this.totalGame.obl > 0 ? true : false,
+        'ork': this.totalGame.ork > 0 ? true : false,
+        'witcher': this.totalGame.witcher > 0 ? true : false,
+        'gow': this.totalGame.gow > 0 ? true : false,
+        'got': this.totalGame.got > 0 ? true : false,
+        'secret': this.totalGame.secret > 0 ? true : false,
+        'simple': this.totalGame.simple > 0 ? true : false,
       }
     }
   }
