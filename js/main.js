@@ -88,19 +88,19 @@ let app = new Vue({
     endGame() {
       this.totalGames++;
       localStorage.setItem('sc2TotalGames', this.totalGames)
-      // Зерг
+      // Стражник
       if(this.score.obl > this.score.witcher && this.score.obl > this.score.got && this.score.ork < 8 && Math.abs(this.score.witcher - this.score.obl) > 3) {
         this.goToResult('obl')
         this.totalGame.obl++
       }
-      //Изначальный
+      // Орк
       else if (this.score.ork > this.score.witcher && 
       this.score.ork > this.score.got && 
       this.score.ork == 8) { 
         this.goToResult('ork')
         this.totalGame.ork++
       }
-      //Протосс
+      // Ведьмак
       else if (this.score.witcher > this.score.obl && 
       this.score.witcher > this.score.got && 
       this.score.gow < 5 && 
@@ -108,25 +108,25 @@ let app = new Vue({
         this.goToResult('witcher')
         this.totalGame.witcher++
       } 
-      //Талдарим
+      // Кратос
       else if (this.score.witcher > this.score.obl && 
       this.score.witcher > this.score.got && 
       this.score.gow == 5) { 
         this.goToResult('gow')
         this.totalGame.gow++
       }
-      //Терран
+      // Безымянный
       else if (this.score.got > this.score.obl && 
       this.score.got > this.score.witcher) { 
         this.goToResult('got')
         this.totalGame.got++
       }
-      //Гибрид
+      // Работяга
       else if (Math.abs(this.score.witcher - this.score.obl) <= 3) { 
         this.goToResult('simple')
         this.totalGame.simple++
       } 
-      //Заражённый терран
+      // Секретный
       else { 
         this.goToResult('secret')
         this.totalGame.secret++
